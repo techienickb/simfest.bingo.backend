@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSignalR();
+builder.Services.AddSignalR().AddAzureSignalR();
 
 builder.Services.AddCors(options =>
 {
@@ -38,5 +38,10 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<BingoHub>("/hub");
 });
+
+//app.UseAzureSignalR(routes =>
+//{
+//    routes.MapHub<BingoHub>("/azhub");
+//});
 
 app.Run();
