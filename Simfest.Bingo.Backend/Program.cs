@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
                   });
 
 });
-builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
+builder.Services.AddApplicationInsightsTelemetry();
 
 var app = builder.Build();
 
@@ -38,11 +38,6 @@ app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<BingoHub>("/hub");
-});
-
-app.UseAzureSignalR(routes =>
-{
-    routes.MapHub<BingoHub>("/azhub");
 });
 
 app.Run();
