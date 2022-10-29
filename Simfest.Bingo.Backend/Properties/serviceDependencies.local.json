@@ -7,13 +7,15 @@
       "secretStore": "LocalSecretsFile",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.SignalRService/SignalR/SimfestBingoBackendSignalR",
       "type": "signalr.azure",
-      "connectionId": "Azure:SignalR:ConnectionString"
+      "connectionId": "Azure:SignalR:ConnectionString",
+      "dynamicId": null
     },
     "appInsights1": {
       "secretStore": "LocalSecretsFile",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/simfest-bingo-backend",
       "type": "appInsights.azure",
-      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING"
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+      "dynamicId": null
     },
     "compute.appService1": {
       "group": "connections",
