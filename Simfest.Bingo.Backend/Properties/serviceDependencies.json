@@ -5,17 +5,12 @@
     },
     "signalr1": {
       "type": "signalr",
-      "connectionId": "Azure:SignalR:ConnectionString",
-      "dynamicId": null
+      "connectionId": "Azure:SignalR:ConnectionString"
     },
     "appInsights1": {
       "type": "appInsights",
       "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING",
       "dynamicId": null
-    },
-    "compute.appService1": {
-      "group": "connections",
-      "type": "compute.appService"
     }
   }
 }
